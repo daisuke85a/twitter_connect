@@ -6,7 +6,7 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 define('CONSUMER_KEY', 'vfCDjQVBO5gg7OLhewzHoIBPh');
 define('CONSUMER_SECRET', 'VbuAGY1YXVmhK6plZAqIQxMoLRM72kdq5fpWCUCV6FHTHgDMDB');
-define('CONSUMER_URL', 'https://' . $_SERVER['HTTP_HOST'] . '/login.php');
+define('CALLBACK_URL', 'https://' . $_SERVER['HTTP_HOST'] . '/twitter_connect/login.php');
 
 define('DSN', 'mysql:host=localhost;dbname=dotinstall_tw_connect_php');
 

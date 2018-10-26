@@ -31,6 +31,9 @@ require_once(__DIR__ . '/config.php');
     <h1>My Timeline</h1>
     <div id="login">
       <a href="login.php"><img src="signin_button.png"></a>
+      <?php echo CALLBACK_URL ?>
+    </div>
+  </div>
 </body>
 
 </html>
