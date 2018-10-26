@@ -1,7 +1,15 @@
 <?php
 
 require_once(__DIR__ . '/config.php');
- 
+
+$twitterLogin = new MyApp\TwitterLogin();
+
+if ($twitterLogin->isLoggedIn()){
+  $me = $_SESSION['me'];
+
+}
+
+
 ?>
 
 <!DOCTYPE html>
@@ -23,17 +31,30 @@ require_once(__DIR__ . '/config.php');
       text-align: center;
       margin: 70px auto;
     }
+
+    #logout{
+      float: right;
+    }
   </style>
 </head>
 
 <body>
   <div id="container">
-    <h1>My Timeline</h1>
-    <div id="login">
-      <a href="login.php"><img src="signin_button.png"></a>
-      <?php echo CALLBACK_URL ?>
-    </div>
-  </div>
+
+    <?php if ($twitterLogin->isLoggedIn()) : ?>
+      <form action="logout.php" method="post" id="logout">
+        <input type="submit" value="Log Out">
+      </form>
+      <h1>@<?= h($me->tw_screen_name); ?>'s Timeline</h1>
+      
+    <?php else : ?>
+      <h1>My Timeline</h1>
+      <div id="login">
+        <a href="login.php"><img src="signin_button.png"></a>
+        <?php echo CALLBACK_URL ?>
+      </div>
+    <?php endif; ?>
+ </div>
 </body>
 
 </html>

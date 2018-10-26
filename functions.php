@@ -5,6 +5,6 @@ function h($s){
 }
 
 function goHome(){
-  header('Location: ' . $_SERVER['HTTP_HOST']);
+  header('Location: https://' . $_SERVER['HTTP_HOST'] . '/twitter_connect/');
   exit;
 }

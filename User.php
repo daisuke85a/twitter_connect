@@ -34,7 +34,7 @@ class User{
     return $res->fetchColumn() === '1';
   }
 
-  function saveTokens($tokens){
+  public function saveTokens($tokens){
     if ($this->_exists($tokens['user_id'])){
       $this->_update($tokens);
     } else{
