@@ -48,7 +48,7 @@ class TwitterLogin{
     //echo "tokens saved";
     //exit;
 
-
+    session_regenerate_id(true); // session hijack
     $_SESSION['me'] = $user->getUser($tokens['user_id']);
 
     var_dump($_SESSION['me']);
