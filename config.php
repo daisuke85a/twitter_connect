@@ -2,6 +2,8 @@
 
 ini_set('display_errors', 1);
 
+require_once(__DIR__ . '/vendor/autoload.php');
+
 define('CONSUMER_KEY', 'vfCDjQVBO5gg7OLhewzHoIBPh');
 define('CONSUMER_SECRET', 'VbuAGY1YXVmhK6plZAqIQxMoLRM72kdq5fpWCUCV6FHTHgDMDB');
 define('CONSUMER_URL', 'https://' . $_SERVER['HTTP_HOST'] . '/login.php');
@@ -16,7 +18,7 @@ session_start();
 
 
 
-require_once(__DIR__. 'functions.php');
-require_once(__DIR__. 'autoload.php');
+require_once(__DIR__. '/functions.php');
+require_once(__DIR__. '/autoload.php');
 
 

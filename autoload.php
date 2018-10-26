@@ -1,6 +1,6 @@
 <?php
 
-sql_autoload_register(function($class){
+spl_autoload_register(function($class){
   $prefix = 'MyApp\\';
 
   if (strpos($class, $prefix) === 0){
